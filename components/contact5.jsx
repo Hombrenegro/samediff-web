@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Header from './header';
-import Footer from './Graveyard/footer';
+import Footer from './footer';
 import ContactImage from "/public/contact_color_BG1.png";
 import { motion } from 'framer-motion';
 
@@ -12,14 +12,14 @@ const Contact = () => {
   const linkStyle = (linkIndex) => { //email text
     const isOuterLink = linkIndex === 0 || linkIndex === 2;
     return `text-center font-space-mono text-3xl sm:text-3xl md:text-4xl lg:text-[25px] xl:text-3xl 2xl:text-4xl transition-colors duration-300 ${
-      hoveredLink === linkIndex ? 'text-sd-yellow' : (isOuterLink ? 'text-gray-400' : 'text-sd-gray')
+      hoveredLink === linkIndex ? 'text-sd-yellow' : (isOuterLink ? 'text-sd-yellow' : 'text-sd-gray')
     } break-words`;
   };
 
   const containerVariants = {
     visible: {
       transition: {
-        delayChildren: 0.05,
+        delayChildren: 0.01,
         staggerChildren: 0.1,
       },
     },
@@ -51,7 +51,7 @@ const Contact = () => {
           onMouseEnter={() => setIsImageHovered(true)}
           onMouseLeave={() => setIsImageHovered(false)}
         >
-          <Image src={ContactImage} alt="contact" className={`z-100 transition-opacity duration-500 ${isImageHovered ? 'opacity-20' : 'opacity-100'}`}/>
+          <Image src={ContactImage} alt="contact" className={`z-10 transition-opacity duration-500 ${isImageHovered ? 'opacity-20' : 'opacity-100'}`}/>
           
           {/* Overlay */}
           <motion.div
@@ -112,7 +112,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <Footer className='z-20'/>
+      <Footer className='z-2'/>
     </div>
   );
 };

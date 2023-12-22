@@ -37,7 +37,7 @@ const Header = () => {
       {/* Header Items */}
       <ul className={`${style.headerItem} text-lg ml-auto pr-1.5 ${style.hoverEffect}`}>
         <li>
-          <Link href="/contact">LET'S TALK</Link>
+          <Link href="/contact">LET&apos;S TALK</Link>
         </li>
       </ul>
     </nav>

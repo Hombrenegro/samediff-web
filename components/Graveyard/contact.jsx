@@ -111,7 +111,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <Footer className='z-20'/>
+      <Footer className='z-0'/>
     </div>
   );
 };

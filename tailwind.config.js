@@ -36,6 +36,7 @@ module.exports = {
         "sd-black": "#0d1212",
         "sd-yellow": "#c9fc00",
         "sd-gray": "#cbcbcb",
+        "sd-pink": "",
       },
     },
   },

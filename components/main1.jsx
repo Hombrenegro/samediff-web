@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Header from './header';
-import Footer from './Graveyard/footer';
+import Footer from './footer';
 import Type from './Title';
 import LogoGrayCrop from "/public/sd-gray-crop.png";
 import { motion } from 'framer-motion';
