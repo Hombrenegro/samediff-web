@@ -13,8 +13,8 @@ const Contact = () => {
   // Function to determine link style
   const linkStyle = (linkIndex) => {
     const isOuterLink = linkIndex === 0 || linkIndex === 2;
-    return `text-center font-space-mono text-3xl transition-colors duration-300 ${
-      hoveredLink === linkIndex ? 'text-sd-yellow' : (isOuterLink ? 'text-gray-400' : 'text-sd-gray')
+    return `text-center font-space-mono text-3xl transition-colors duration-4000 ${
+      hoveredLink === linkIndex ? 'text-sd-yellow' : (isOuterLink ? 'text-sd-gray' : 'text-sd-yellow')
     } break-words z-20`;
   };
 
@@ -46,7 +46,7 @@ const Contact = () => {
           onMouseEnter={() => setIsImageHovered(true)}
           onMouseLeave={() => setIsImageHovered(false)}
         >
-          <Image src={ContactImage} alt="contact" className={`z-10 transition-opacity duration-500 ${isImageHovered ? 'opacity-20' : 'opacity-100'}`}/>
+          <Image src={ContactImage} alt="contact" className={`z-10 transition-opacity duration-500 ${isImageHovered ? 'opacity-60' : 'opacity-100'}`}/>
           
           {/* Second Image */}
           <Image 
@@ -58,7 +58,7 @@ const Contact = () => {
 
         {/* Email address container with staggering effect */}
         <motion.div
-          className="space-x-2 translate-y-80 xl:translate-y-[360px] absolute flex flex-col lg:flex-row justify-center items-center transition-opacity duration-300 z-30"
+          className="space-x-2 translate-y-80 xl:translate-y-[360px] absolute flex flex-col lg:flex-row justify-center items-center transition-opacity duration-400 z-30"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

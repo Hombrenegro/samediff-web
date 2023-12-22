@@ -18,7 +18,8 @@ const Main = () => {
       <Header />
 
       {/* Video and Logo Container - reduced vertical padding */}
-      <div className="flex-grow-0 flex justify-center items-center w-full pointer-events-none -py-10">
+      <div className="flex-grow-0 flex justify-center items-center w-full pointer-events-none">
+
         {/* Logo */}
         <motion.div className="absolute z-0 flex items-center justify-center"
           initial={{ opacity: 0, y: 10 }}
@@ -28,12 +29,12 @@ const Main = () => {
           <Image
             src={LogoGrayCrop}
             alt="sd-logo"
-            style={{ width: "84%", objectFit: "cover" }}
+            style={{ width: "84%", objectFit: "cover",}}
           />
         </motion.div>
 
         {/* Video Component */}
-        <motion.div className="relative z-10 w-full"
+        <motion.div className="relative z-10 w-full -py-[500px]"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 100, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}        
@@ -44,22 +45,21 @@ const Main = () => {
             muted
             style={{ width: "100%", objectFit: "cover" }}
           >
-            <source src="/images/sd_anim_transparent.webm" type="video/webm" />
-            <source src="/images/website_bg_v05.mov" type="video/mp4"/>
+            <source src="/images/sd_anim_transparent2.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </motion.div>
       </div>
       
       {/* Typewriter - flex-grow-0 to ensure it doesn't expand */}
-      <div className="flex-grow-0 text-center py-2">
-        <h1 className="pointer-events-none font-space-grotesk text-[36px] tracking-[.01em] text-sd-gray">
+      <div className="flex-grow-0 text-center z-16">
+        <h1 className="pointer-events-none font-space-grotesk text-[36px] lg:text-[36px] md:text-[30px] sm:text-[26px] xs:text-[18px] tracking-[.01em] text-sd-gray">
           <Type />
         </h1>
       </div>
 
       {/* Footer */}
-      <Footer className="-mt-8" />
+      <Footer className />
     </div>
   );
 };
