@@ -45,21 +45,21 @@ const Main = () => {
             muted
             style={{ width: "100%", objectFit: "cover" }}
           >
-            <source src="/images/sd_anim_transparent2.webm" type="video/webm" />
+            <source src="/images/sd_anim_transparent.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </motion.div>
       </div>
       
       {/* Typewriter - flex-grow-0 to ensure it doesn't expand */}
-      <div className="flex-grow-0 text-center z-16">
+      <div className="flex-grow-0 text-center -translate-y-[140px] z-16">
         <h1 className="pointer-events-none font-space-grotesk text-[36px] lg:text-[36px] md:text-[30px] sm:text-[26px] xs:text-[18px] tracking-[.01em] text-sd-gray">
           <Type />
         </h1>
       </div>
 
       {/* Footer */}
-      <Footer className />
+      <Footer className='absolute bottom-0 w-full z-[-1]' />
     </div>
   );
 };

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Header from './header';
 import Footer from './footerNew';
-import ContactImage from "/public/contact_color_BG1.png";
-import HoveredImage from "/public/manifesto_overlay_v01.png";
+import ContactImage from "/public/images/contact_color_BG3.jpg";
+import HoveredImage from "/public/images/manifesto_overlay_v02.png";
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -13,7 +13,7 @@ const Contact = () => {
   // Function to determine link style
   const linkStyle = (linkIndex) => {
     const isOuterLink = linkIndex === 0 || linkIndex === 2;
-    return `text-center font-space-mono text-3xl transition-colors duration-4000 ${
+    return `text-center font-space-mono text-[26px] transition-colors duration-1000 ${
       hoveredLink === linkIndex ? 'text-sd-yellow' : (isOuterLink ? 'text-sd-gray' : 'text-sd-yellow')
     } break-words z-20`;
   };
@@ -22,7 +22,7 @@ const Contact = () => {
   const containerVariants = {
     visible: {
       transition: {
-        delayChildren: 0.05,
+        delayChildren: 0.4,
         staggerChildren: 0.1,
       },
     },
@@ -37,22 +37,28 @@ const Contact = () => {
     <div className="relative bg-sd-black w-full h-screen overflow-y-auto overflow-x-hidden">
       <Header className='z-20' />
       
-      <div className="relative w-full flex justify-center items-center mt-16 mb-16">
+      <div className="relative flex justify-center items-center mt-16 mb-16">
         <motion.div 
-          className="relative w-full h-full"
+          className="relative w-full h-full relative flex flex-col items-center"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 100, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           onMouseEnter={() => setIsImageHovered(true)}
           onMouseLeave={() => setIsImageHovered(false)}
         >
-          <Image src={ContactImage} alt="contact" className={`z-10 transition-opacity duration-500 ${isImageHovered ? 'opacity-60' : 'opacity-100'}`}/>
+          <Image 
+          src={ContactImage}
+          alt="contact"
+          className={`z-10 transition-opacity duration-500 ${isImageHovered ? 'opacity-100' : 'opacity-100'}`}
+          style={{ width: '75%', height: 'auto' }}
+          />
           
           {/* Second Image */}
           <Image 
             src={HoveredImage} 
             alt="hovered" 
             className={`absolute top-0 left-0 z-20 transition-opacity duration-500 ${isImageHovered ? 'opacity-100' : 'opacity-0'}`}
+            style={{ width: '75%', height: 'auto' }}
           />
         </motion.div>
 
@@ -78,7 +84,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <Footer className='absolute bottom-0 w-full z-[-1]'/>
+      <Footer className='absolute bottom-0 w-full z-[-1]' />
     </div>
   );
 };
