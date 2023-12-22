@@ -39,7 +39,7 @@ const Contact = () => {
       
       <div className="relative flex justify-center items-center mt-16 mb-16">
         <motion.div 
-          className="relative w-full h-full relative flex flex-col items-center"
+          className="relative w-full h-full flex flex-col items-center"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 100, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -49,7 +49,7 @@ const Contact = () => {
           <Image 
           src={ContactImage}
           alt="contact"
-          className={`z-10 transition-opacity duration-500 ${isImageHovered ? 'opacity-100' : 'opacity-100'}`}
+          className={`z-10 transition-opacity duration-500 ${isImageHovered ? 'opacity-0' : 'opacity-100'}`}
           style={{ width: '75%', height: 'auto' }}
           />
           
@@ -57,7 +57,7 @@ const Contact = () => {
           <Image 
             src={HoveredImage} 
             alt="hovered" 
-            className={`absolute top-0 left-0 z-20 transition-opacity duration-500 ${isImageHovered ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute top-0 left-42 z-20 transition-opacity duration-500 ${isImageHovered ? 'opacity-100' : 'opacity-0'}`}
             style={{ width: '75%', height: 'auto' }}
           />
         </motion.div>
