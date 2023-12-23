@@ -4,12 +4,14 @@ import { FaInstagram } from "react-icons/fa";
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 
+// Footer component
 const style = {
-  footer: `mt-20 z-0 bg-transparent py-16 w-full flex justify-center items-center padding-0 margin-0`,
-  contentWrapper: `flex flex-col items-center`,
-  footerIcon: `text-sd-gray text-3xl hover:text-sd-yellow cursor-pointer`,
+  footer: `mt-20 z-0 bg-sd-black py-16 w-full flex justify-center items-center px-8`, // Add the desired padding value (px-8) here
+  contentWrapper: `flex flex-col items-center bottom-[1px]`,
+  footerIcon: `text-sd-gray text-3xl hover:text-sd-yellow cursor-pointer transition duration-150 ease-in-out transform hover:scale-105`,
   footerText: `opacity-25 text-[10px] text-sd-gray mt-4`,
 };
+
 
 const footerTxt = '©2024 SAME DIFFERENCE';
 
@@ -24,7 +26,7 @@ const Footer = () => {
   }, [controls, inView]);
 
   return (
-    <div ref={ref} className={style.footer}>
+    <div ref={ref} className={`${style.footer} absolute bottom-0`}>
       <motion.div
         className={style.contentWrapper}
         initial={{ opacity: 0, y: 10 }}
