@@ -43,6 +43,7 @@ const Contact = () => {
     setIsImageHovered(false);
     marqueeRef.current.start();
   };
+  
   return (
     <div className="relative bg-sd-black w-full h-screen overflow-y-auto overflow-x-hidden">
       <Header className='z-20' />
