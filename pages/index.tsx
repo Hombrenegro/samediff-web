@@ -1,7 +1,8 @@
 //samediff web v0.1.1
 
 import type { NextPage } from 'next'
-import Main from '../components/main2'
+import Main from '../components/main3'
+
 const Home: NextPage = () => {
   return (
   <>

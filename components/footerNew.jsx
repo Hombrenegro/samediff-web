@@ -9,7 +9,7 @@ const style = {
   footer: `mt-20 z-0 bg-sd-black py-16 w-full flex justify-center items-center px-8`, // Add the desired padding value (px-8) here
   contentWrapper: `flex flex-col items-center bottom-[1px]`,
   footerIcon: `text-sd-gray text-3xl hover:text-sd-yellow cursor-pointer transition duration-150 ease-in-out transform hover:scale-105`,
-  footerText: `opacity-25 text-[10px] text-sd-gray mt-4`,
+  footerText: `opacity-25 font-space-grotesk text-[11px] text-sd-gray mt-6`,
 };
 
 
@@ -29,9 +29,9 @@ const Footer = () => {
     <div ref={ref} className={`${style.footer} absolute bottom-0`}>
       <motion.div
         className={style.contentWrapper}
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 0, y: 2 }}
         animate={controls}
-        transition={{ duration: 0.5, delay: 0 }}
+        transition={{ duration: 0.8, delay: 0 }}
       >
         <Link
           href="https://www.instagram.com/samedifference.tv/"

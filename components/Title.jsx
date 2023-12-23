@@ -20,9 +20,9 @@ function Type() {
         strings: all,
         autoStart: true,
         loop: true,
-        delay: 95,
-        deleteSpeed: 50,
-        pauseFor: 8000,
+        delay: 130,
+        deleteSpeed: 85,
+        pauseFor: 8750,
         cursor: "|",
       }}
     />
