@@ -4,6 +4,7 @@
 
 body {
     @apply bg-[#0d1212];
+    overflow: hidden;
 }
 
 @font-face {

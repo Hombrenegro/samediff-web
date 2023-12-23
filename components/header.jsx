@@ -6,7 +6,7 @@ import LogoYellow from "/public/sd-yellow.png";
 
 const style = {
   header: `relative z-20 flex items-center bg-transparent mr-3 px-8 max-h-[90px]`,
-  headerItem: `flex px-200 font-archivo text-sd-gray hover:text-sd-yellow cursor-pointer hover:underline`,
+  headerItem: `flex px-200 font-archivo text-sd-gray hover:text-sd-yellow cursor-pointer hover:underline hover:scale-104`,
   headerLogoSize: 119,
   // hoverEffect: `transition duration-150 ease-in-out transform hover:scale-105`
 };
