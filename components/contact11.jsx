@@ -91,7 +91,7 @@ const Contact = () => {
           {/* Email address container with staggering effect */}
         <motion.div
             ref={emailContainerRef} //e-mail styling, font sizing, mobile layout and what have you
-            className="absolute bottom-[-8px] space-x-1 absolute flex flex-col lg:flex-row justify-center transition-opacity duration-300 z-30"
+            className="absolute bottom-[-10px] space-x-1 absolute flex flex-col lg:flex-row justify-center transition-opacity duration-300 z-30"
             style={{ maxWidth: '50%', margin: 'auto' }} // Set your desired width
             variants={containerVariants}
             initial="hidden"
@@ -102,7 +102,7 @@ const Contact = () => {
            ref={marqueeRef} 
            behavior="marquee scroll" 
            direction="left"
-           animation="marquee infinite"
+           animation="marquee"
            scrollamount="1.7"
            loop="repeat"
             onMouseEnter={() => marqueeRef.current.stop()}
@@ -125,7 +125,7 @@ const Contact = () => {
               onMouseLeave={() => setHoveredLink(null)}
               variants={itemVariants}
               style={{
-                fontSize: '15px', // Adjust the scaling factor as needed
+                fontSize: '18px', // Adjust the scaling factor as needed
               }}
               >
               {`${type}@samedifference.tv`}
@@ -145,154 +145,7 @@ const Contact = () => {
               onMouseLeave={() => setHoveredLink(null)}
               variants={itemVariants}
               style={{
-                fontSize: '15px', // Adjust the scaling factor as needed
-              }}
-            >
-              {`${type}@samedifference.tv`}
-            </motion.a>
-            {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp;
-            </React.Fragment>
-          ))}
-
-           {/* Repeat the entire array to avoid gaps */}
-           {['artists', 'brands', 'jobs'].map((type, index) => (
-            <React.Fragment key={`${type}-repeat-`}>
-            <motion.a
-              key={`${type}-repeat`}
-              href={`mailto:${type}@samedifference.tv`}
-              className={linkStyle(index)}
-              onMouseEnter={() => setHoveredLink(index)}
-              onMouseLeave={() => setHoveredLink(null)}
-              variants={itemVariants}
-              style={{
-                fontSize: '15px', // Adjust the scaling factor as needed
-              }}
-            >
-              {`${type}@samedifference.tv`}
-            </motion.a>
-            {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp;
-            </React.Fragment>
-          ))}
-
-           {/* Repeat the entire array to avoid gaps */}
-           {['artists', 'brands', 'jobs'].map((type, index) => (
-            <React.Fragment key={`${type}-repeat-`}>
-            <motion.a
-              key={`${type}-repeat`}
-              href={`mailto:${type}@samedifference.tv`}
-              className={linkStyle(index)}
-              onMouseEnter={() => setHoveredLink(index)}
-              onMouseLeave={() => setHoveredLink(null)}
-              variants={itemVariants}
-              style={{
-                fontSize: '15px', // Adjust the scaling factor as needed
-              }}
-            >
-              {`${type}@samedifference.tv`}
-            </motion.a>
-            {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp;
-            </React.Fragment>
-          ))}
-
-           {/* Repeat the entire array to avoid gaps */}
-           {['artists', 'brands', 'jobs'].map((type, index) => (
-            <React.Fragment key={`${type}-repeat-`}>
-            <motion.a
-              key={`${type}-repeat`}
-              href={`mailto:${type}@samedifference.tv`}
-              className={linkStyle(index)}
-              onMouseEnter={() => setHoveredLink(index)}
-              onMouseLeave={() => setHoveredLink(null)}
-              variants={itemVariants}
-              style={{
-                fontSize: '15px', // Adjust the scaling factor as needed
-              }}
-            >
-              {`${type}@samedifference.tv`}
-            </motion.a>
-            {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp;
-            </React.Fragment>
-          ))}
-
-           {/* Repeat the entire array to avoid gaps */}
-           {['artists', 'brands', 'jobs'].map((type, index) => (
-            <React.Fragment key={`${type}-repeat-`}>
-            <motion.a
-              key={`${type}-repeat`}
-              href={`mailto:${type}@samedifference.tv`}
-              className={linkStyle(index)}
-              onMouseEnter={() => setHoveredLink(index)}
-              onMouseLeave={() => setHoveredLink(null)}
-              variants={itemVariants}
-              style={{
-                fontSize: '15px', // Adjust the scaling factor as needed
-              }}
-            >
-              {`${type}@samedifference.tv`}
-            </motion.a>
-            {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp;
-            </React.Fragment>
-          ))}
-
-          {/* Repeat the entire array to avoid gaps */}
-          {['artists', 'brands', 'jobs'].map((type, index) => (
-            <React.Fragment key={`${type}-repeat-`}>
-            <motion.a
-              key={`${type}-repeat`}
-              href={`mailto:${type}@samedifference.tv`}
-              className={linkStyle(index)}
-              onMouseEnter={() => setHoveredLink(index)}
-              onMouseLeave={() => setHoveredLink(null)}
-              variants={itemVariants}
-              style={{
-                fontSize: '15px', // Adjust the scaling factor as needed
-              }}
-            >
-              {`${type}@samedifference.tv`}
-            </motion.a>
-            {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp;
-            </React.Fragment>
-          ))}
-
-          {/* Repeat the entire array to avoid gaps */}
-          {['artists', 'brands', 'jobs'].map((type, index) => (
-            <React.Fragment key={`${type}-repeat-`}>
-            <motion.a
-              key={`${type}-repeat`}
-              href={`mailto:${type}@samedifference.tv`}
-              className={linkStyle(index)}
-              onMouseEnter={() => setHoveredLink(index)}
-              onMouseLeave={() => setHoveredLink(null)}
-              variants={itemVariants}
-              style={{
-                fontSize: '15px', // Adjust the scaling factor as needed
-              }}
-            >
-              {`${type}@samedifference.tv`}
-            </motion.a>
-            {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp;
-            </React.Fragment>
-          ))}
-
-          {/* Repeat the entire array to avoid gaps */}
-          {['artists', 'brands', 'jobs'].map((type, index) => (
-            <React.Fragment key={`${type}-repeat-`}>
-            <motion.a
-              key={`${type}-repeat`}
-              href={`mailto:${type}@samedifference.tv`}
-              className={linkStyle(index)}
-              onMouseEnter={() => setHoveredLink(index)}
-              onMouseLeave={() => setHoveredLink(null)}
-              variants={itemVariants}
-              style={{
-                fontSize: '15px', // Adjust the scaling factor as needed
+                fontSize: '18px', // Adjust the scaling factor as needed
               }}
             >
               {`${type}@samedifference.tv`}
@@ -302,6 +155,89 @@ const Contact = () => {
             </React.Fragment>
           ))}
           
+          {/* Repeat the entire array to avoid gaps */}
+          {['artists', 'brands', 'jobs'].map((type, index) => (
+            <React.Fragment key={`${type}-repeat-`}>
+            <motion.a
+              key={`${type}-repeat`}
+              href={`mailto:${type}@samedifference.tv`}
+              className={linkStyle(index)}
+              onMouseEnter={() => setHoveredLink(index)}
+              onMouseLeave={() => setHoveredLink(null)}
+              variants={itemVariants}
+              style={{
+                fontSize: '18px', // Adjust the scaling factor as needed
+              }}
+            >
+              {`${type}@samedifference.tv`}
+            </motion.a>
+            {/* Add a space (non-breaking space in this case) */}
+            &nbsp; &nbsp;
+            </React.Fragment>
+          ))}
+
+          {/* Repeat the entire array to avoid gaps */}
+          {['artists', 'brands', 'jobs'].map((type, index) => (
+            <React.Fragment key={`${type}-repeat-`}>
+            <motion.a
+              key={`${type}-repeat`}
+              href={`mailto:${type}@samedifference.tv`}
+              className={linkStyle(index)}
+              onMouseEnter={() => setHoveredLink(index)}
+              onMouseLeave={() => setHoveredLink(null)}
+              variants={itemVariants}
+              style={{
+                fontSize: '18px', // Adjust the scaling factor as needed
+              }}
+            >
+              {`${type}@samedifference.tv`}
+            </motion.a>
+            {/* Add a space (non-breaking space in this case) */}
+            &nbsp; &nbsp;
+            </React.Fragment>
+          ))}
+
+          {/* Repeat the entire array to avoid gaps */}
+          {['artists', 'brands', 'jobs'].map((type, index) => (
+            <React.Fragment key={`${type}-repeat-`}>
+            <motion.a
+              key={`${type}-repeat`}
+              href={`mailto:${type}@samedifference.tv`}
+              className={linkStyle(index)}
+              onMouseEnter={() => setHoveredLink(index)}
+              onMouseLeave={() => setHoveredLink(null)}
+              variants={itemVariants}
+              style={{
+                fontSize: '18px', // Adjust the scaling factor as needed
+              }}
+            >
+              {`${type}@samedifference.tv`}
+            </motion.a>
+            {/* Add a space (non-breaking space in this case) */}
+            &nbsp; &nbsp;
+            </React.Fragment>
+          ))}
+
+          {/* Repeat the entire array to avoid gaps */}
+          {['artists', 'brands', 'jobs'].map((type, index) => (
+            <React.Fragment key={`${type}-repeat-`}>
+            <motion.a
+              key={`${type}-repeat`}
+              href={`mailto:${type}@samedifference.tv`}
+              className={linkStyle(index)}
+              onMouseEnter={() => setHoveredLink(index)}
+              onMouseLeave={() => setHoveredLink(null)}
+              variants={itemVariants}
+              style={{
+                fontSize: '18px', // Adjust the scaling factor as needed
+              }}
+            >
+              {`${type}@samedifference.tv`}
+            </motion.a>
+            {/* Add a space (non-breaking space in this case) */}
+            &nbsp; &nbsp;
+            </React.Fragment>
+          ))}
           </marquee>
         </motion.div>
        </motion.div>
