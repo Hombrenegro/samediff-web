@@ -238,6 +238,69 @@ const Contact = () => {
             &nbsp; &nbsp;
             </React.Fragment>
           ))}
+
+          {/* Repeat the entire array to avoid gaps */}
+          {['artists', 'brands', 'jobs'].map((type, index) => (
+            <React.Fragment key={`${type}-repeat-`}>
+            <motion.a
+              key={`${type}-repeat`}
+              href={`mailto:${type}@samedifference.tv`}
+              className={linkStyle(index)}
+              onMouseEnter={() => setHoveredLink(index)}
+              onMouseLeave={() => setHoveredLink(null)}
+              variants={itemVariants}
+              style={{
+                fontSize: '15px', // Adjust the scaling factor as needed
+              }}
+            >
+              {`${type}@samedifference.tv`}
+            </motion.a>
+            {/* Add a space (non-breaking space in this case) */}
+            &nbsp; &nbsp;
+            </React.Fragment>
+          ))}
+
+          {/* Repeat the entire array to avoid gaps */}
+          {['artists', 'brands', 'jobs'].map((type, index) => (
+            <React.Fragment key={`${type}-repeat-`}>
+            <motion.a
+              key={`${type}-repeat`}
+              href={`mailto:${type}@samedifference.tv`}
+              className={linkStyle(index)}
+              onMouseEnter={() => setHoveredLink(index)}
+              onMouseLeave={() => setHoveredLink(null)}
+              variants={itemVariants}
+              style={{
+                fontSize: '15px', // Adjust the scaling factor as needed
+              }}
+            >
+              {`${type}@samedifference.tv`}
+            </motion.a>
+            {/* Add a space (non-breaking space in this case) */}
+            &nbsp; &nbsp;
+            </React.Fragment>
+          ))}
+
+          {/* Repeat the entire array to avoid gaps */}
+          {['artists', 'brands', 'jobs'].map((type, index) => (
+            <React.Fragment key={`${type}-repeat-`}>
+            <motion.a
+              key={`${type}-repeat`}
+              href={`mailto:${type}@samedifference.tv`}
+              className={linkStyle(index)}
+              onMouseEnter={() => setHoveredLink(index)}
+              onMouseLeave={() => setHoveredLink(null)}
+              variants={itemVariants}
+              style={{
+                fontSize: '15px', // Adjust the scaling factor as needed
+              }}
+            >
+              {`${type}@samedifference.tv`}
+            </motion.a>
+            {/* Add a space (non-breaking space in this case) */}
+            &nbsp; &nbsp;
+            </React.Fragment>
+          ))}
           
           </marquee>
         </motion.div>
