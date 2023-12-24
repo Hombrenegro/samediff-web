@@ -34,15 +34,16 @@ const Contact = () => {
     hidden: { x: 0, opacity: 1 },
     visible: { y: 0, opacity: 1, transition: { duration: 0 } },
   };
-  const handleMouseEnter = () => {
-    setIsImageHovered(true);
-    marqueeRef.current.stop();
-  };
+  
+  // const handleMouseEnter = () => { 
+  //   setIsImageHovered(true);
+  //   marqueeRef.current.stop();
+  // };
 
-  const handleMouseLeave = () => {
-    setIsImageHovered(false);
-    marqueeRef.current.start();
-  };
+  // const handleMouseLeave = () => {
+  //   setIsImageHovered(false);
+  //   marqueeRef.current.start();
+  // };
   
   return (
     <div className="relative bg-sd-black w-full h-screen overflow-y-hidden overflow-x-hidden"> 
@@ -61,7 +62,7 @@ const Contact = () => {
           <Image
             src={ContactImage}
             alt="contact"
-            className={`z-10 transition-opacity easeOut duration-1000 ${isImageHovered ? 'opacity-90' : 'opacity-100'}`}
+            className={`z-10 transition-opacity easeOut duration- ${isImageHovered ? 'opacity-90' : 'opacity-100'}`}
             style={{ width: '50%', height: 'auto' }}
             initial={{ opacity: 0, y: 2 }}
             animate={{ opacity: 100, y: 0 }}
@@ -71,7 +72,7 @@ const Contact = () => {
           <Image 
             src={ContactImageMobile} 
             alt="contact" 
-            className={`z-10 transition-opacity duration-1000 easeOut ${isImageHovered ? 'opacity-90' : 'opacity-100'} block md:hidden`}
+            className={`z-10 transition-opacity duration-[1.5s] easeOut ${isImageHovered ? 'opacity-90' : 'opacity-100'} block md:hidden`}
           />
           {/* Desktop Hovered Image */}
           <Image 
@@ -105,8 +106,8 @@ const Contact = () => {
            animation="marquee"
            scrollamount="1.7"
            loop="repeat"
-            onMouseEnter={() => marqueeRef.current.stop()}
-            onMouseLeave={() => marqueeRef.current.start()}
+            // onMouseEnter={() => marqueeRef.current.stop()}
+            // onMouseLeave={() => marqueeRef.current.start()}
             style={{
               whiteSpace: 'nowrap', // Prevent line breaks
               overflow: 'hidden',   // Hide overflow to avoid sudden jump

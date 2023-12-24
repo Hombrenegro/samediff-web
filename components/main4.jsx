@@ -28,7 +28,7 @@ const Main = () => {
         className="absolute z-0 flex items-center justify-center"
         initial={{ opacity: 0, y: 2 }}
         animate={{ opacity: 100, y: 0 }}
-        transition={{ duration: 0.7, delay: 0 }}
+        transition={{ duration: 0.4, delay: 0 }}
         
           >
             <Image
@@ -41,9 +41,9 @@ const Main = () => {
         {/* Video Component */}
         <motion.div 
           className="relative"
-          initial={{ opacity: 0, y: 4 }}
+          initial={{ opacity: 0, y: 3 }}
           animate={{ opacity: 75, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           style={{ width: '85%', display: 'fixed', alignItems: 'center', justifyContent: 'center' }} 
         >
           <video
@@ -60,8 +60,7 @@ const Main = () => {
       
       {/* Typewriter - flex-grow-0 to ensure it doesn't expand */}
       <div className="flex-grow-0 text-center -mt-[130px] z-16">
-        <h1 className=
-        "font-space-grotesk font-bold text-sd-gray leading-tight tracking-tight xl:text-[32px] lg:text-[26px] md:text-[22px] sm:text-18px] xs:text-[12px]"
+        <h1 className="font-space-grotesk font-bold text-sd-gray leading-tight tracking-tight xl:text-[32px] lg:text-[26px] md:text-[22px] sm:text-18px] xs:text-[12px]"
         >
           <Type />
         </h1>
