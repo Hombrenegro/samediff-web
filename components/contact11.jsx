@@ -25,14 +25,14 @@ const Contact = () => {
     visible: {
       transition: {
         delayChildren: 0,
-        staggerChildren: 0,
+        staggerChildren: 0.3,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { x: 10, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
+    hidden: { x: 0, opacity: 1 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0 } },
   };
   const handleMouseEnter = () => {
     setIsImageHovered(true);
@@ -45,13 +45,13 @@ const Contact = () => {
   };
   
   return (
-    <div className="relative bg-sd-black w-full h-screen overflow-y-hidden overflow-x-hidden">
+    <div className="relative bg-sd-black w-full h-screen overflow-y-hidden overflow-x-hidden"> 
       <Header className='z-20' />
       
       <div className="relative flex justify-center items-center mt-8 mb-16"> 
-        <motion.div                       // This here is the image container, the parent of all the image mallarchy
+        <motion.div                       
           className="relative flex flex-col items-center"
-          initial={{ opacity: 0, y: 2 }}
+          initial={{ opacity: 0, y: 0}}
           animate={{ opacity: 100, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
           onMouseEnter={() => setIsImageHovered(true)}
@@ -91,7 +91,7 @@ const Contact = () => {
           {/* Email address container with staggering effect */}
         <motion.div
             ref={emailContainerRef} //e-mail styling, font sizing, mobile layout and what have you
-            className="absolute bottom-[-8px] space-x-2 absolute flex flex-col lg:flex-row justify-center transition-opacity duration-300 z-30"
+            className="absolute bottom-[-8px] space-x-1 absolute flex flex-col lg:flex-row justify-center transition-opacity duration-300 z-30"
             style={{ maxWidth: '50%', margin: 'auto' }} // Set your desired width
             variants={containerVariants}
             initial="hidden"
@@ -103,7 +103,7 @@ const Contact = () => {
            behavior="marquee scroll" 
            direction="left"
            animation="marquee infinite"
-           scrollamount="1.5"
+           scrollamount="1.7"
            loop="repeat"
             onMouseEnter={() => marqueeRef.current.stop()}
             onMouseLeave={() => marqueeRef.current.start()}
@@ -111,7 +111,7 @@ const Contact = () => {
               whiteSpace: 'nowrap', // Prevent line breaks
               overflow: 'hidden',   // Hide overflow to avoid sudden jump
               width: '100%',        // Full width
-              textIndent: '-90%',
+              textIndent: '-98%',
               
             }}
         >
@@ -130,7 +130,7 @@ const Contact = () => {
               >
               {`${type}@samedifference.tv`}
             </motion.a>
-              &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; 
           </React.Fragment>
           ))}
           
@@ -151,7 +151,7 @@ const Contact = () => {
               {`${type}@samedifference.tv`}
             </motion.a>
             {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
             </React.Fragment>
           ))}
 
@@ -172,7 +172,7 @@ const Contact = () => {
               {`${type}@samedifference.tv`}
             </motion.a>
             {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
             </React.Fragment>
           ))}
 
@@ -193,7 +193,7 @@ const Contact = () => {
               {`${type}@samedifference.tv`}
             </motion.a>
             {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
             </React.Fragment>
           ))}
 
@@ -214,7 +214,7 @@ const Contact = () => {
               {`${type}@samedifference.tv`}
             </motion.a>
             {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
             </React.Fragment>
           ))}
 
@@ -235,7 +235,7 @@ const Contact = () => {
               {`${type}@samedifference.tv`}
             </motion.a>
             {/* Add a space (non-breaking space in this case) */}
-            &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
             </React.Fragment>
           ))}
           
