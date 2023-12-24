@@ -19,7 +19,7 @@ const Main = () => {
 
       {/* Video and Logo Container */}
       <div 
-        className="flex-grow-0 flex items-center justify-center w-full h-screen -mt-20 scale-100"
+        className="flex-grow-0 flex items-center justify-center w-full h-screen -mt-28"
         style={{ width: '100%', height: '100%' }}
         >
 
@@ -30,11 +30,11 @@ const Main = () => {
         animate={{ opacity: 100, y: 0 }}
         transition={{ duration: 0.7, delay: 0 }}
         
-        >
-          <Image
-            src={LogoGrayCrop}
-            alt="sd-logo"
-            style={{ width: "74%", objectFit: "cover",}}
+          >
+            <Image
+              src={LogoGrayCrop}
+              alt="sd-logo"
+              style={{ width: "74%", objectFit: "cover",}}
           />
         </motion.div>
 
@@ -59,9 +59,9 @@ const Main = () => {
       </div>
       
       {/* Typewriter - flex-grow-0 to ensure it doesn't expand */}
-      <div className="flex-grow-0 text-center -mt-[125px] z-16">
+      <div className="flex-grow-0 text-center -mt-[100px] z-16">
         <h1 className=
-        "font-space-grotesk font-bold text-sd-gray leading-tight tracking-tight lg:text-[36px] md:text-[30px] sm:text-18px] xs:text-[12px]"
+        "font-space-grotesk font-bold text-sd-gray leading-tight tracking-tight xl:text-[40px] lg:text-[26px] md:text-[22px] sm:text-18px] xs:text-[12px]"
         >
           <Type />
         </h1>

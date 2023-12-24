@@ -35,7 +35,7 @@ const Header = () => {
       </Link>
 
       {/* Header Items */}
-      <ul className={`${style.headerItem} text-lg ml-auto pr-1.5 ${style.hoverEffect}`}>
+      <ul className={`${style.headerItem} text-lg ml-auto -pt-1 pr-1.5 ${style.hoverEffect}`}>
         <li>
           <Link href="/contact">LET&apos;S TALK</Link>
         </li>

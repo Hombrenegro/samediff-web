@@ -48,7 +48,7 @@ const Contact = () => {
     <div className="relative bg-sd-black w-full h-screen overflow-y-hidden overflow-x-hidden">
       <Header className='z-20' />
       
-      <div className="relative flex justify-center items-center mt-10 mb-16"> 
+      <div className="relative flex justify-center items-center mt-8 mb-16"> 
         <motion.div                       // This here is the image container, the parent of all the image mallarchy
           className="relative flex flex-col items-center"
           initial={{ opacity: 0, y: 2 }}
