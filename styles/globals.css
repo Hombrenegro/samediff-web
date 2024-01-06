@@ -40,6 +40,7 @@ body {
     src: url('/fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-size:xx-large;
 }
 
 @font-face {

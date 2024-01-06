@@ -60,7 +60,12 @@ const Main = () => {
       
       {/* Typewriter - flex-grow-0 to ensure it doesn't expand */}
       <div className="flex-grow-0 text-center -mt-[130px] z-16">
-        <h1 className="font-space-grotesk font-bold text-sd-gray leading-tight tracking-tight xl:text-[32px] lg:text-[26px] md:text-[22px] sm:text-18px] xs:text-[12px]"
+        <h1 className="font-space-grotesk font-bold text-sd-gray leading-tight tracking-tight 
+        xl:text-[54px] 
+        lg:text-[44px] 
+        md:text-[32px] 
+        sm:text-[18px] 
+        xs:text-[12px]"
         >
           <Type />
         </h1>
