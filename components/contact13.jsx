@@ -57,25 +57,34 @@ const Contact = () => {
           initial={{ opacity: 0, y: 0}}
           animate={{ opacity: 100, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
-          onMouseEnter={() => setIsImageHovered(true)}
+          onMouseEnter={(e) => {
+            if (e.target.tagName === 'IMG') {
+              setIsImageHovered(true);
+            }
+          }}
           onMouseLeave={() => setIsImageHovered(false)}
+          
         >
           {/* Desktop Image */}
           <Image
             src={ContactImage}
             alt="contact"
-            className={`z-10 transition-opacity easeOut duration- ${isImageHovered ? 'opacity-10' : 'opacity-100'}`}
+            className={`z-10 transition-opacity easeOut duration-[1.2s] ${
+              isImageHovered ? 'opacity-20' : 'opacity-100'
+            }`}
             style={{ width: '50%', height: 'auto' }}
             initial={{ opacity: 0, y: 2 }}
             animate={{ opacity: 100, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           />
-           {/* Mobile Image */}
+          
+          {/* Mobile Image */}
           <Image 
             src={ContactImageMobile} 
             alt="contact" 
             className={`z-10 transition-opacity duration-[1.5s] easeOut ${isImageHovered ? 'opacity-90' : 'opacity-100'} block md:hidden`}
           />
+          
           {/* Desktop Hovered Image */}
           <Image 
             src={HoveredImage} 
