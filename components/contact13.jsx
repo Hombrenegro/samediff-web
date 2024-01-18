@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Header from './header';
 import Footer from './footer';
-import ContactImage from "/public/images/contact_color_BG3.jpg";
+import ContactImage from "/public/images/manifesto_image_1.15.jpg";
 import ContactImageMobile from "/public/contact_color_BG3_mobile.jpg";
 import HoveredImage from "/public/manifesto_overlay_v03.png";
 import HoveredImageMobile from "/public/manifesto_overlay_v01_mobile.png";
