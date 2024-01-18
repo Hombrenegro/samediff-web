@@ -25,7 +25,7 @@ const Contact = () => {
 
   return (
     <div className="relative bg-sd-black w-full h-screen overflow-y-hidden overflow-x-hidden">
-      <Header className='z-10' />
+      <Header className='z-20' />
       <motion.div
         className="relative flex flex-col items-center"
         initial={{ opacity: 0, y: 0 }}
