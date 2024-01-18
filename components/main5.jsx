@@ -58,7 +58,11 @@ const Main = () => {
       {/* Typewriter Container */}
       <div className={style.typewriterContainer}>
         <h1 className="font-space-grotesk font-bold text-sd-gray leading-tight tracking-tight
-       xs:text-1xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
+       xs:text-1xl 
+       sm:text-2xl 
+       md:text-3xl 
+       lg:text-4xl 
+       xl:text-5xl"
         >
           <Type />
         </h1>

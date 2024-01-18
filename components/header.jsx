@@ -7,7 +7,8 @@ import LogoYellow from "/public/sd-yellow.png";
 const style = {
   header: `relative z-20 flex items-center bg-transparent mr-3 px-8 max-h-[90px]`,
   headerItem: `flex px-200 font-archivo text-sd-gray hover:text-sd-yellow cursor-pointer hover:underline hover:scale-104`,
-  headerLogoSize: 119,
+  headerFontSize: '1.4rem', // Adjust the font size as needed
+  headerLogoSize: 160,
   // hoverEffect: `transition duration-150 ease-in-out transform hover:scale-105`
 };
 
@@ -35,7 +36,7 @@ const Header = () => {
       </Link>
 
       {/* Header Items */}
-      <ul className={`${style.headerItem} text-lg ml-auto -pt-1 pr-1.5 ${style.hoverEffect}`}>
+      <ul className={`${style.headerItem} text-px-84 ml-auto -pt-1 pr-1.5 ${style.hoverEffect}`}style={{ fontSize: style.headerFontSize }}>
         <li>
           <Link href="/contact">LET&apos;S TALK</Link>
         </li>
