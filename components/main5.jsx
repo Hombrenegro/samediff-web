@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 const style = {
   mainComp: `overflow-x-hidden overflow-y-hidden bg-sd-black min-h-screen min-w-screen`,
   contentContainer: `flex-1 flex flex-col justify-center items-center min-h-screen overflow-hidden`,
-  videoLogoContainer: `flex-grow-0 flex items-center justify-center w-full h-screen -mt-48 pb-48`,
+  videoLogoContainer: `flex-grow-0 flex items-center justify-center w-full h-screen -mt-12 pb-48`,
   typewriterContainer: `flex-grow-0 text-center -mt-[420px] z-16`,
 };
 
@@ -31,7 +31,7 @@ const Main = () => {
           <Image
             src={LogoGrayCrop}
             alt="sd-logo"
-            style={{ width: "74%", objectFit: "cover" }}
+            style={{ width: "80%", objectFit: "cover" }}
           />
         </motion.div>
 
@@ -41,13 +41,13 @@ const Main = () => {
           initial={{ opacity: 0, y: 3 }}
           animate={{ opacity: 75, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          style={{ width: '88%', display: 'fixed', alignItems: 'center', justifyContent: 'center' }} 
+          style={{ width: '93%', display: 'fixed', alignItems: 'center', justifyContent: 'center' }} 
         >
           <video
             autoPlay
             loop
             muted
-            style={{ width: '120%', height: '120%', objectFit: 'cover' }}
+            style={{ width: '125%', height: '125%', objectFit: 'cover' }}
           >
             <source src="/images/sd_anim_transparent.webm" type="video/webm" />
             Your browser does not support the video tag.
@@ -57,16 +57,11 @@ const Main = () => {
 
       {/* Typewriter Container */}
       <div className={style.typewriterContainer}>
-        <h1 className="font-space-grotesk font-bold text-sd-gray leading-tight tracking-tight
-       xs:text-1xl 
-       sm:text-2xl 
-       md:text-3xl 
-       lg:text-4xl 
-       xl:text-5xl"
-        >
-          <Type />
-        </h1>
-      </div>
+  <h1 className="font-space-grotesk font-bold text-sd-gray mt-20 text-2xl sm:text-3xl md:text-1xl lg:text-4xl xl:text-5xl">
+    <Type />
+  </h1>
+</div>
+     
 
       {/* Footer */}
       <Footer className='absolute bottom-0 w-full z-[-1]' />
