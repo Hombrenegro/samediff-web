@@ -9,8 +9,8 @@ import { motion } from 'framer-motion';
 const style = {
   mainComp: `overflow-x-hidden overflow-y-hidden bg-sd-black min-h-screen min-w-screen`,
   contentContainer: `flex-1 flex flex-col justify-center items-center min-h-screen overflow-hidden`,
-  videoLogoContainer: `flex-grow-0 flex items-center justify-center w-full h-screen -mt-16 pb-48`,
-  typewriterContainer: `flex-grow-0 text-center -mt-[400px] z-16`,
+  videoLogoContainer: `flex-grow-0 flex items-center justify-center w-full h-screen -mt-12 pb-48`,
+  typewriterContainer: `flex-grow-0 text-center -mt-[420px] z-16`,
 };
 
 const Main = () => {
@@ -20,7 +20,7 @@ const Main = () => {
       <Header />
 
       {/* Video and Logo Container */}
-      <div className= {style.videoLogoContainer}>
+      <div className={style.videoLogoContainer}>
         {/* SD BG Logo */}
         <motion.div 
           className="absolute z-0 flex items-center justify-center"

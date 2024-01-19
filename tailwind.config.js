@@ -38,6 +38,13 @@ module.exports = {
         "sd-yellow": "#c9fc00",
         "sd-gray": "#cbcbcb",
       },
+      fontSize: {
+        '7xl': '5rem',
+        '8xl': '6rem',
+        '9xl': '7rem',
+        'xxl': '8rem', // Add your custom size
+        // Add more custom sizes if needed
+      },
     },
   },
   plugins: [],

@@ -4,7 +4,7 @@ import Header from './header';
 import Footer from './footer';
 import ContactImage from "/public/images/manifesto_image_1.15.jpg";
 import ContactImageMobile from "/public/contact_color_BG3_mobile.jpg";
-import HoveredImage from "/public/manifesto_overlay_v03.png";
+import HoveredImage from "/public/images/manifesto_overlay_v04.png";
 import HoveredImageMobile from "/public/manifesto_overlay_v01_mobile.png";
 import { motion } from 'framer-motion';
 
@@ -100,8 +100,8 @@ const Contact = () => {
               ref={marqueeRef} 
               behavior="marquee scroll" 
               direction="left"
-              animation="marquee"
-              scrollamount="1.7"
+              animation="marquee" 
+              scrollamount="1.7" // speed of the scroll
               style={{
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
@@ -118,7 +118,7 @@ const Contact = () => {
                     onMouseLeave={() => setHoveredLink(null)}
                     variants={itemVariants}
                     style={{
-                      fontSize: '28px',
+                      fontSize: '23px',
                     }}
                   >
                     {`${type}@samedifference.tv`}
