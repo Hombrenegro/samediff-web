@@ -19,7 +19,7 @@ const Contact = () => {
   // Function to determine link styles based on index
   const linkStyle = (linkIndex) => {
     const isOuterLink = linkIndex === 0 || linkIndex === 2;
-    return `text-center font-archivo font-150 tracking-tight transition-colors hover:underline hover:sd-yellow ${
+    return `text-center | font-archivo font-150 tracking-tight transition-colors hover:underline hover:sd-yellow ${
       hoveredLink === linkIndex ? 'text-sd-yellow ' : (isOuterLink ? 'text-sd-gray' : 'text-sd-gray')
     } break-words z-20`;
   };
@@ -46,7 +46,7 @@ const Contact = () => {
         const newEmail = ['artists', 'brands', 'jobs'][(prevArray.length) % 3];
         return [...prevArray, newEmail];
       });
-    }, 5);
+    }, 4);
 
     return () => clearInterval(interval);
   }, []);
@@ -55,9 +55,9 @@ const Contact = () => {
   return (
     <div className="relative bg-sd-black w-full h-screen"> 
       <Header className='z-20' /> 
-      <div className="relative flex justify-center items-center mt-10 mb-16 pt-10 mx-auto"> {/* Container for the Middle Image */}
+      <div className="relative flex justify-center items-center mt-10 mb-10 pt-10 pb-10 mx-auto"> {/* Container for the Middle Image */}
         <motion.div                       
-          className="relative flex flex-col items-center"
+          className="relative flex flex-col items-center" //******This needs to be fixed as this container has the right height but wrong width
           initial={{ opacity: 0, y: 0}}
           animate={{ opacity: 100, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
@@ -69,10 +69,10 @@ const Contact = () => {
           <Image
             src={ContactImage}
             alt="contact"
-            className={`z-10 transition-opacity easeOut duration-[1.2s] ${
+            className={`z-10 transition-opacity easeOut duration-[1.3s] ${
               isImageHovered ? 'opacity-5' : 'opacity-100'
             }`}
-            style={{ width: '50%', height: 'auto' }}
+            style={{ width: '55%', height: 'auto' }}
             initial={{ opacity: 0, y: 2 }}
             animate={{ opacity: 100, y: 0 }}
             transition={{ duration: 0.4, delay: 0.4 }}
@@ -83,14 +83,14 @@ const Contact = () => {
             src={HoveredImage} 
             alt="hovered" 
             className={`absolute top-0 left-42 z-20 transition-opacity duration-1000 easeOut ${isImageHovered ? 'opacity-100' : 'opacity-0'}`}
-            style={{ width: '50%', height: 'auto' }}
+            style={{ width: '55%', height: 'auto' }}
           
           />
           {/* Email address container with staggering effect */}
           <motion.div
             ref={emailContainerRef}
             className="absolute bottom-[-10px] space-x-1 absolute flex flex-col lg:flex-row justify-center transition-opacity duration-200 z-30"
-            style={{ maxWidth: '50%', margin: 'auto' }}
+            style={{ maxWidth: '55%', margin: 'auto' }}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -118,7 +118,7 @@ const Contact = () => {
                     onMouseLeave={() => setHoveredLink(null)}
                     variants={itemVariants}
                     style={{
-                      fontSize: '23px',
+                      fontSize: '24px',
                     }}
                   >
                     {`${type}@samedifference.tv`}

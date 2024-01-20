@@ -18,7 +18,7 @@ const Contact = () => {
         const newEmail = ['artists', 'brands', 'jobs'][(prevArray.length) % 3];
         return [...prevArray, newEmail];
       });
-    }, 10);
+    }, 9);
 
     return () => clearInterval(interval);
   }, []);
@@ -45,7 +45,7 @@ const Contact = () => {
           <Image
             src={HoveredImage}
             alt="hovered"
-            className="absolute top-0 left-0 transition-opacity duration-1000 ease-out opacity-0 hover:opacity-100"
+            className="absolute top-0 left-0 transition-opacity duration-800 ease-out opacity-0 hover:opacity-100"
             style={{ width: '50%', height: 'auto' }}
           />
         </div>
@@ -68,7 +68,7 @@ const Contact = () => {
               <React.Fragment key={`${type}-${typeIndex}`}>
                 <a
                   href={`mailto:${type}@samedifference.tv`}
-                  className={`text-center font-archivo font-150 tracking-tight transition-colors break-words z-20 ${hoveredLink === typeIndex ? 'text-sd-yellow hover:underline' : 'text-sd-gray'}`}
+                  className={`text-center font-archivo font-150 tracking-tight transition-colors break-words z-20 ${hoveredLink === typeIndex ? 'text-sd-yellow underline' : 'text-sd-gray'}`}
                   onMouseEnter={() => setHoveredLink(typeIndex)}
                   onMouseLeave={() => setHoveredLink(null)}
                   style={{
