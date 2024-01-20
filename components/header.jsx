@@ -5,10 +5,10 @@ import LogoGray from "/public/sd-gray.png";
 import LogoYellow from "/public/sd-yellow.png";
 
 const style = {
-  header: `relative | z-20 | flex | items-center | bg-transparent | mt-6 | mr-3 | px-8 | max-h-[90px]`,
+  header: `relative | z-20 | flex | items-center | bg-transparent | mt-8 | mr-1 | px-8 | max-h-[90px]`,
   headerItem: `flex px-200 font-archivo text-sd-gray hover:text-sd-yellow cursor-pointer hover:underline hover:scale-104`,
-  headerFontSize: '1.4rem', // Adjust the font size as needed
-  headerLogoSize: 120,
+  headerFontSize: '1.2rem', // Adjust the font size as needed
+  headerLogoSize: 95,
   // hoverEffect: `transition duration-150 ease-in-out transform hover:scale-105`
 };
 

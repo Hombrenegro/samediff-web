@@ -8,8 +8,8 @@ import Link from 'next/link';
 const style = {
   footer: `mt-20 z-0 bg-sd-black py-14 w-full flex justify-center items-center px-8`, // Add the desired padding value (px-8) here
   contentWrapper: `flex flex-col items-center`,
-  footerIcon: `text-sd-gray scale-[150%] hover:text-sd-yellow cursor-pointer transition duration-150 ease-in-out transform`,
-  footerText: `opacity-70 font-space-grotesk text-[7px] text-sd-gray mt-[20px] -mb-[1px]`,
+  footerIcon: `text-sd-gray scale-[130%] hover:text-sd-yellow cursor-pointer transition duration-150 ease-in-out transform`,
+  footerText: `opacity-75 font-space-grotesk text-[8px] text-sd-gray mt-[15px] -mb-[1px]`,
 };
 
 

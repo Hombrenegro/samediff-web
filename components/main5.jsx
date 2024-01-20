@@ -7,10 +7,10 @@ import LogoGrayCrop from "/public/sd-gray-crop.png";
 import { motion } from 'framer-motion';
 
 const style = {
-  mainComp: `overflow-x-hidden | overflow-y-hidden | bg-sd-black | min-h-screen | min-w-screen`,
-  contentContainer: `flex-1 | flex | flex-col | justify-center | items-center | min-h-screen | overflow-hidden`,
-  videoLogoContainer: `flex-grow-0 flex | items-center | justify-center | w-full h-screen | -mt-16 | pb-48`,
-  typewriterContainer: `flex-grow-1 | space-evenly | text-center | pt-90 | -mt-80 | z-16 `,
+  mainComp: `overflow-x-hidden | overflow-y-hidden | bg-sd-black | min-h-screen | min-w-screen | z-0`,
+  contentContainer: `flex-1 | flex | flex-col | justify-center | items-center | min-h-screen | overflow-hidden | z-0`,
+  videoLogoContainer: `flex-grow-0 flex | items-center | justify-center | w-full h-screen | -mt-20 | pb-20 | z-1`,
+  typewriterContainer: `flex-grow-1 | space-evenly | text-center | pt-90 | -mt-80 | z-100 `,
 };
 
 const Main = () => {
@@ -23,7 +23,7 @@ const Main = () => {
       <div className= {style.videoLogoContainer}>
         {/* SD BG Logo */}
         <motion.div 
-          className="absolute | z-0 | flex | items-center | justify-center | space-between-4" yar
+          className="absolute | flex | items-center | justify-center | space-between-4" yar
           initial={{ opacity: 0, y: 2 }}
           animate={{ opacity: 100, y: 0 }}
           transition={{ duration: 0.4, delay: 0 }}
@@ -57,7 +57,7 @@ const Main = () => {
 
       {/* Typewriter Container */}
       <div className={`${style.typewriterContainer}`}>
-        <h1 className="font-space-grotesk | font-normal | text-sd-gray | pt-18 | text-2xl | sm:text-3xl | md:text-1xl | lg:text-4xl | xl:text-5xl">
+        <h1 className="font-space-grotesk | font-normal | text-sd-gray | pt-36 | sm:text-1xl | md:text-2xl | lg:text-3xl | xl:text-4xl">
           <Type />
         </h1>
       </div>
