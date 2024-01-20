@@ -19,7 +19,7 @@ const Contact = () => {
   // Function to determine link styles based on index
   const linkStyle = (linkIndex) => {
     const isOuterLink = linkIndex === 0 || linkIndex === 2;
-    return `text-center | font-archivo font-150 tracking-tight transition-colors hover:underline hover:sd-yellow ${
+    return `text-center | font-archivo | font-150 | tracking-tight | transition-colors | hover:underline hover:sd-yellow | ${
       hoveredLink === linkIndex ? 'text-sd-yellow ' : (isOuterLink ? 'text-sd-gray' : 'text-sd-gray')
     } break-words z-20`;
   };
@@ -53,11 +53,11 @@ const Contact = () => {
   
   // Rendered JSX for the Contact component
   return (
-    <div className="relative bg-sd-black w-full h-screen"> 
+    <div className="relative bg-sd-black w-full min-h-screen"> 
       <Header className='z-20' /> 
-      <div className="relative flex justify-center items-center mt-10 mb-10 pt-10 pb-10 mx-auto"> {/* Container for the Middle Image */}
+      <div className=" | flex | justify-center | items-center | mt-8 | pt-8 | mx-auto"> {/* Container for the Middle Image */}
         <motion.div                       
-          className="relative flex flex-col items-center" //******This needs to be fixed as this container has the right height but wrong width
+          className="relative | flex | flex-col | items-center" //****This is the part I think needs to be fixed as this container has the right height but the width goes the whole screen ******
           initial={{ opacity: 0, y: 0}}
           animate={{ opacity: 100, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
@@ -69,10 +69,10 @@ const Contact = () => {
           <Image
             src={ContactImage}
             alt="contact"
-            className={`z-10 transition-opacity easeOut duration-[1.3s] ${
+            className={`z-10 | transition-opacity | easeOut duration-[1.3s] ${
               isImageHovered ? 'opacity-5' : 'opacity-100'
             }`}
-            style={{ width: '55%', height: 'auto' }}
+            style={{ width: '48%', height: 'auto' }}
             initial={{ opacity: 0, y: 2 }}
             animate={{ opacity: 100, y: 0 }}
             transition={{ duration: 0.4, delay: 0.4 }}
@@ -82,15 +82,15 @@ const Contact = () => {
           <Image 
             src={HoveredImage} 
             alt="hovered" 
-            className={`absolute top-0 left-42 z-20 transition-opacity duration-1000 easeOut ${isImageHovered ? 'opacity-100' : 'opacity-0'}`}
-            style={{ width: '55%', height: 'auto' }}
+            className={`absolute | top-0 | left-42 | z-20 | transition-opacity duration-1000 easeOut | ${isImageHovered ? 'opacity-100' : 'opacity-0'}`}
+            style={{ width: '48%', height: 'auto' }}
           
           />
           {/* Email address container with staggering effect */}
           <motion.div
             ref={emailContainerRef}
-            className="absolute bottom-[-10px] space-x-1 absolute flex flex-col lg:flex-row justify-center transition-opacity duration-200 z-30"
-            style={{ maxWidth: '55%', margin: 'auto' }}
+            className="absolute | bottom-[-10px] | space-x-1 | absolute | flex flex-col | justify-center | transition-opacity duration-200 | z-30"
+            style={{ maxWidth: '48%', margin: 'auto' }}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -101,7 +101,7 @@ const Contact = () => {
               behavior="marquee scroll" 
               direction="left"
               animation="marquee" 
-              scrollamount="1.7" // speed of the scroll
+              scrollamount="1.5" // speed of the scroll
               style={{
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
@@ -118,7 +118,7 @@ const Contact = () => {
                     onMouseLeave={() => setHoveredLink(null)}
                     variants={itemVariants}
                     style={{
-                      fontSize: '24px',
+                      fontSize: '16px',
                     }}
                   >
                     {`${type}@samedifference.tv`}
@@ -131,7 +131,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <Footer className='absolute bottom-0 w-full z-[-1]' />
+      <Footer className='w-full | z-[-1]' style={{ bottom: '0' }} />
     </div>
   );
 };

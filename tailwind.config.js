@@ -39,10 +39,12 @@ module.exports = {
         "sd-gray": "#cbcbcb",
       },
       fontSize: {
+        '4xl': '2.4rem',
+        '5xl': '3rem',
         '7xl': '5rem',
         '8xl': '6rem',
         '9xl': '7rem',
-        'xxl': '8rem', // Add your custom size
+        'xxl': '8rem',
         // Add more custom sizes if needed
       },
     },

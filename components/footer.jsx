@@ -6,10 +6,10 @@ import Link from 'next/link';
 
 // Footer component
 const style = {
-  footer: `mt-20 z-0 bg-sd-black py-14 w-full flex justify-center items-center px-8`, // Add the desired padding value (px-8) here
-  contentWrapper: `flex flex-col items-center`,
-  footerIcon: `text-sd-gray scale-[130%] hover:text-sd-yellow cursor-pointer transition duration-150 ease-in-out transform`,
-  footerText: `opacity-75 font-space-grotesk text-[8px] text-sd-gray mt-[15px] -mb-[1px]`,
+  footer: `mt-20 | bg-sd-black | absolute | bottom-14 | w-full | flex | justify-center | items-center | px-8 | z-0`,
+  contentWrapper: `flex | flex-col | items-center`,
+  footerIcon: `text-sd-gray | scale-[110%] | hover:text-sd-yellow | cursor-pointer | transition duration-150 | ease-in-out | `,
+  footerText: `opacity-78 font-space-grotesk text-[8px] text-sd-gray mt-[12px] -mb-[1px]`,
 };
 
 
