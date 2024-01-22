@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import ContactComponent from '../components/contact13'
+import ContactComponent from '../components/contact14'
 const Home: NextPage = () => {
   return (
   <>
