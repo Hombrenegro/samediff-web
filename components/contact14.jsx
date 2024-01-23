@@ -46,13 +46,13 @@ const Contact = () => {
         const newEmail = ['artists', 'brands', 'jobs'][(prevArray.length) % 3];
         return [...prevArray, newEmail];
       });
-    }, 4);
+    }, 3);
 
     return () => clearInterval(interval);
   }, []);
   
   return (
-    <div className="relative bg-sd-black w-full min-h-screen"> 
+    <div className="relative | bg-sd-black | w-full | min-h-screen"> 
       <Header className='z-20' /> 
       <div className="flex | justify-center | items-center | mt-8 | pt-8 | mx-auto">
         <motion.div                       
@@ -73,6 +73,7 @@ const Contact = () => {
             }`}
             style={{ width: '100%', height: 'auto' }} // Adjust to 100% of the parent container
           />
+          
           {/* Desktop Hovered Image */}
           <Image 
             src={HoveredImage} 
@@ -84,7 +85,7 @@ const Contact = () => {
           {/* Email address container with staggering effect */}
           <motion.div
             ref={emailContainerRef}
-            className="absolute | bottom-[-10px] | space-x-1 | flex flex-col | justify-center | transition-opacity duration-200 | z-30"
+            className="absolute | bottom-[-10px] | space-x-1 | flex | flex-col | justify-center | transition-opacity duration-200 | z-30"
             style={{ maxWidth: '100%', width: '100%', margin: 'auto' }} // Adjust to match the image container width
             variants={containerVariants}
             initial="hidden"
@@ -126,7 +127,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <div className='absolute bottom-12 w-full'>
+      <div className='absolute | bottom-6 | w-full'>
         <Footer />
       </div>
     </div>

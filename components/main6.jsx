@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Image from 'next/image';
 import Header from './header';
@@ -10,7 +11,7 @@ const style = {
   mainComp: `overflow-x-hidden | overflow-y-hidden | bg-sd-black | min-h-screen | min-w-screen | z-0`,
   contentContainer: `flex-1 | flex | flex-col | justify-center | items-center | overflow-hidden | mb-14 | z-0`,
   videoLogoContainer: `flex-grow-0 | flex | items-center | justify-center | w-full h-screen | -mt-20 | pb-16 | mb-2 | z-1`,
-  typewriterContainer: `flex-grow-1 | space-evenly | text-center | pt-90 | -mt-80 | z-3 `, // Something funky going on in this container fur sure
+  typewriterContainer: `flex-grow-0 | space-evenly | text-center | pt-90 | -mt-80 | z-3 `, 
 };
 
 const Main = () => {
@@ -55,13 +56,14 @@ const Main = () => {
 
       {/* Typewriter Container */}
       <div className={`${style.typewriterContainer}`}>
-        <h1 className="font-space-grotesk | font-normal | text-sd-gray | pt-32 | sm:text-1xl | md:text-3xl | lg:text-4xl | xl:text-4xl">
+        <h1 style={{"font-size": "2.5vw"}} className="font-space-grotesk | font-normal | text-sd-gray | pt-32 | sm:text-1xl | md:text-3xl | lg:text-4xl | xl:text-4xl">
+        
           <Type />
         </h1>
       </div>
      
       {/* Footer */}
-      <Footer className='absolute bottom-0 w-full z-[-1]' />
+      <Footer className='bottom-1 | w-full' />
     </div>
   );
 };

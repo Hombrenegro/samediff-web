@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 // Footer component
 const style = {
-  footer: `mt-20 | bg-sd-black | absolute | bottom-14 | w-full | flex | justify-center | items-center | px-8 | z-0`,
+  footer: `mt-20 | bg-sd-black | absolute | bottom-8 | w-full | flex | justify-center | items-center | px-8 | z-0`,
   contentWrapper: `flex | flex-col | items-center`,
   footerIcon: `text-sd-gray | scale-[110%] | hover:text-sd-yellow | cursor-pointer | transition duration-150 | ease-in-out | `,
   footerText: `opacity-78 font-space-grotesk text-[8px] text-sd-gray mt-[12px] -mb-[1px]`,
