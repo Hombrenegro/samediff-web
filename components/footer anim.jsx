@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 
-// Footer component
+// Footer component styles
 const style = {
   footer: `bg-transparent | bottom-14 | w-full | flex | justify-center | items-center | px-8 | z-0`,
   contentWrapper: `flex | flex-col | items-center`,
@@ -12,24 +12,28 @@ const style = {
   footerText: `opacity-78 font-space-grotesk text-[8px] text-sd-gray mt-[12px]`,
 };
 
-
 const footerTxt = '©2024 SAME DIFFERENCE';
 
 const Footer = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ triggerOnce: true });
 
   React.useEffect(() => {
     if (inView) {
-      controls.start({ opacity: 100, y: 0 });
+      controls.start({ opacity: 1, y: 0 });
+    } else {
+      controls.start({ opacity: 0, y: 10 });
     }
   }, [controls, inView]);
 
   return (
-    <div ref={ref} className={`${style.footer}`}>
-      <div
-        className={style.contentWrapper}
-      >
+    <motion.div 
+      ref={ref} 
+      initial={{ opacity: 0, y: 20 }} 
+      animate={controls} 
+      className={style.footer}
+    >
+      <div className={style.contentWrapper}>
         <Link
           href="https://www.instagram.com/samedifference.tv/"
           target="_blank"
@@ -41,7 +45,7 @@ const Footer = () => {
           {footerTxt}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
