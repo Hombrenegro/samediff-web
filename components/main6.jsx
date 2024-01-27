@@ -7,9 +7,10 @@ import LogoGrayCrop from "/public/sd-gray-crop.png";
 import { motion } from 'framer-motion';
 
 const style = {
-  mainComp: `flex flex-col justify-between overflow-x-hidden overflow-y-hidden bg-sd-black min-h-screen min-w-screen z-0`,
-  videoLogoContainer: `flex items-center justify-center w-full z-1 relative`,
-  typewriterContainer: `w-full text-center mt-22 mb-10`, // Adjusted margin-bottom
+  mainComp: `overflow-x-hidden | overflow-y-hidden | bg-sd-black | min-h-screen | min-w-screen | z-0`,
+  contentContainer: `flex-1 | flex | flex-col | justify-center | items-center | overflow-hidden | mb-14 | z-1`,
+  videoLogoContainer: `flex-grow-0 | flex | items-center | justify-center | w-full h-screen | -mt-20 | pb-16 | mb-2 | z-2`,
+  typewriterContainer: `flex-grow-0 | space-evenly | text-center | pt-90 | -mt-80 | z-3 `, 
 };
 
 const Main = () => {

@@ -46,13 +46,13 @@ const Contact = () => {
         const newEmail = ['artists', 'brands', 'jobs'][(prevArray.length) % 3];
         return [...prevArray, newEmail];
       });
-    }, 4);
+    }, 16);
 
     return () => clearInterval(interval);
   }, []);
   
   return (
-    <div className="relative bg-sd-black w-full min-h-screen"> 
+    <div className="relative | bg-sd-black | min-h-screen | min-w-screen"> 
       <Header className='z-20' /> 
       <div className="flex | justify-center | items-center | mt-8 | pt-8 | mx-auto">
         <motion.div                       
