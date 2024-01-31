@@ -68,7 +68,7 @@ const Contact = () => {
           <Image
             src={ContactImage}
             alt="contact"
-            className={`z-10 | transition-opacity | easeOut duration-[1.3s] ${
+            className={`z-10 | transition-opacity | easeOut duration-[0.3s] ${
               isImageHovered ? 'opacity-5' : 'opacity-100'
             }`}
             style={{ width: '100%', height: 'auto' }} // Adjust to 100% of the parent container
