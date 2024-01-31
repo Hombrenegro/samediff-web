@@ -8,9 +8,9 @@ import { motion } from 'framer-motion';
 
 const style = {
   mainComp: `overflow-x-hidden overflow-y-hidden bg-sd-black min-h-screen min-w-screen z-0`,
-  contentContainer: `flex-1 flex flex-col justify-center items-center overflow-hidden mb-0 z-0`,
-  videoLogoContainer: `flex-grow-0 flex items-center justify-center w-full h-screen -mt-24 pb-24 pt-1 -mt-4 z-1`,
-  typewriterContainer: `flex-grow-0 flex items-center justify-center w-full`
+  contentContainer: `flex-1 flex flex-col justify-center items-center overflow-hidden mb-0 z-1`,
+  videoLogoContainer: `flex-grow-0 flex items-center justify-center w-full h-screen pb-40 pt-1 -mt-4 z-3`,
+  typewriterContainer: `flex justify-center mt-auto`
 };
 
 const Main = () => {
@@ -32,32 +32,34 @@ const Main = () => {
         </motion.div>
 
         <motion.div
-          className="relative"
+          className="relative w-full" // Ensure this container is relative for the child absolute elements
           initial={{ opacity: 0, y: 3 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          style={{ width: '90%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         >
           <video
             autoPlay
             loop
             muted
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '90%', height: '100%', objectFit: 'cover' }}
           >
             <source src="/images/sd_anim_transparent.webm" type="video/webm" />
           </video>
-        </motion.div>
-      </div>
 
-      <div className={style.typewriterContainer}>
-        <h1 style={{"fontSize": "2.5vw"}} className="font-space-grotesk font-normal text-sd-gray absolute z-10">
-          <Type />
-        </h1>
+          {/* Adjusted for centering within the relative container */}
+          <div className={style.typewriterContainer} style={{ position: 'absolute', bottom: '75px', width: '100%' }}>
+            <h1 style={{"fontSize": "2.8vw"}} className="font-space-grotesk font-normal text-sd-gray">
+              <Type />
+            </h1>
+          </div>
+        </motion.div>
       </div>
 
       <Footer className='bottom-1 w-full' />
     </div>
   );
 };
+
 
 export default Main;

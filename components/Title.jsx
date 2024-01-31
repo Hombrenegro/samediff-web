@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 
-const all = ["WE CONNECT ARTISTS WITH BRAND SPONSORS."];
+const all = ["WE CONNECT ARTISTS WITH BRANDS."];
 
 function Type() {
   const [startTyping, setStartTyping] = useState(false);

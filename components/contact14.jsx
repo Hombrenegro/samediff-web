@@ -54,7 +54,7 @@ const Contact = () => {
   return (
     <div className="relative | bg-sd-black | w-full | min-h-screen"> 
       <Header className='z-20' /> 
-      <div className="flex | justify-center | items-center | mt-8 | pt-8 | mx-auto">
+      <div className="flex | justify-center | items-center | mt-9 | pt-9 | mx-auto">
         <motion.div                       
           className="relative | flex | flex-col | items-center"
           style={{ width: '48%' }} // Set the width to match the image width
