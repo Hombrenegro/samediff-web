@@ -4,7 +4,7 @@ import Header from './header';
 import Footer from './footer';
 import ContactImage from "/public/images/manifesto_image_1.15.jpg";
 import ContactImageMobile from "/public/contact_color_BG3_mobile.jpg";
-import HoveredImage from "/public/images/manifesto_overlay_v04.png";
+import HoveredImage from "/public/images/manifesto_overlay_v05.png";
 import HoveredImageMobile from "/public/manifesto_overlay_v01_mobile.png";
 import { motion } from 'framer-motion';
 
