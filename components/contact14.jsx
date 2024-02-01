@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Header from './header';
 import Footer from './footer';
 import ContactImage from "/public/images/manifesto_image_1.15.jpg";
-import ContactImageMobile from "/public/contact_color_BG3_mobile.jpg";
+import ContactImageMobile from "/public/images/contact_color_BG3_mobile.png";
 import HoveredImage from "/public/images/manifesto_overlay_v05.png";
-import HoveredImageMobile from "/public/manifesto_overlay_v01_mobile.png";
+import HoveredImageMobile from "/public/images/manifesto_overlay_v01_mobile.png";
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -56,8 +56,7 @@ const Contact = () => {
       <Header className='z-20' /> 
       <div className="flex | justify-center | items-center | mt-9 | pt-9 | mx-auto">
         <motion.div                       
-          className="relative | flex | flex-col | items-center"
-          style={{ width: '48%' }} // Set the width to match the image width
+          className="image-container | relative | flex | flex-col | items-center"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 100, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
@@ -68,7 +67,7 @@ const Contact = () => {
           <Image
             src={ContactImage}
             alt="contact"
-            className={`z-10 | transition-opacity | easeOut duration-[0.3s] ${
+            className={`z-10 | transition-opacity | easeOut duration-[0.3s] hidden md:block ${
               isImageHovered ? 'opacity-5' : 'opacity-100'
             }`}
             style={{ width: '100%', height: 'auto' }} // Adjust to 100% of the parent container
@@ -78,8 +77,24 @@ const Contact = () => {
           <Image 
             src={HoveredImage} 
             alt="hovered" 
-            className={`absolute | top-0 | left-42 | z-20 | transition-opacity duration-1000 easeOut | ${isImageHovered ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute | top-0 | left-42 | z-20 | transition-opacity duration-1000 easeOut hidden md:block | ${isImageHovered ? 'opacity-100' : 'opacity-0'}`}
             style={{ width: '100%', height: 'auto' }} // Adjust to 100% of the parent container
+          />
+
+          {/* Mobile Image */}
+          <Image 
+            src={ContactImageMobile} 
+            alt="contact" 
+            className={`z-10 | transition-opacity | easeOut duration-[0.3s] ${isImageHovered ? 'opacity-5' : 'opacity-100'} block md:hidden`}
+            style={{ width: '100%', height: 'auto%' }} // Adjust to 100% of the parent container
+          />
+       
+          {/* Mobile Hovered Image */}
+          <Image 
+            src={HoveredImageMobile} 
+            alt="hovered" 
+            className={`absolute top-0 left-0 z-20 transition-opacity duration-1000 easeOut ${isImageHovered ? 'opacity-100' : 'opacity-0'} block md:hidden`}
+            style={{ width: '100%', height: 'auto%' }} // Adjust to 100% of the parent container
           />
 
           {/* Email address container with staggering effect */}
