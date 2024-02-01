@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    @apply bg-[#0d1212];
+    overflow: hidden;
+}
+
+.main {
+    position: absolute;
+    width: 80vw;
+    height: 0;
+    padding-bottom: 40vw;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-div {
+    width: 80vw;
+    height: 40vw;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@font-face {
+    font-family: 'archivo-black';
+    src: url('/fonts/Archivo_Black/ArchivoBlack-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'space-mono';
+    src: url('/fonts/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space-grotesk-light';
+    src: url('/fonts/Space_Grotesk/SpaceGrotesk-Light.ttf') format('truetype');
+    font-weight: normal bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space-grotesk-medium';
+    src: url('/fonts/Space_Grotesk/SpaceGrotesk-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space-grotesk';
+    src: url('/fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size:xx-large;
+}
+
+@font-face {
+    font-family: 'space-grotesk-semi';
+    src: url('/fonts/Space_Grotesk/SpaceGrotesk-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space-grotesk-bold';
+    src: url('/fonts/Space_Grotesk/SpaceGrotesk-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .ContactImageMobile { /* Replace with the actual class name of your container */
+      width: 100%;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .video-container video {
+      width: 20%;
+      height: 100%; /* Adjust height as needed */
+    }
+}
+/* Desktop styles */
+.image-container {
+    width: 48%; /* Default width for desktop */
+    /* Add other desktop-specific styles here */
+}
+  
+
+  @media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
+    .image-container {
+      width: 100%;
+      height: auto; /* Full width on mobile screens */
+      margin-top: 65px;
+    }
+}
+  
+
+
+/* Desktop Styles */
+.desktop-typewriter-container h1 {
+    /* Desktop-specific styles here */
+    font-size: 2.8vw;
+  }
+  

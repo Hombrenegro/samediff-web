@@ -2,15 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
     @apply bg-[#0d1212];
     overflow: hidden;
 }
+
 .main {
     position: absolute;
-    width: 80vw; /* 60% of the viewport width */
-    height: 0; /* Initially set to 0 */
-    padding-bottom: 40vw; /* Height as a percentage of width, 4:3 ratio */
+    width: 80vw;
+    height: 0;
+    padding-bottom: 40vw;
     margin: auto;
     top: 50%;
     left: 50%;
@@ -18,10 +26,9 @@ body {
 }
 
 .centered-div {
-    width: 80vw; /* 60% of the viewport's width */
-    height: 40vw; /* height is 3/4 of the width, maintaining 4:3 ratio */
-    background-color: #f0f0f0; /* Example background color */
-    
+    width: 80vw;
+    height: 40vw;
+    background-color: #f0f0f0;
 }
 
 .container {
@@ -34,12 +41,6 @@ body {
     top: 0;
     left: 0;
 }
-  
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
 
 @font-face {
     font-family: 'archivo-black';
@@ -47,6 +48,7 @@ body, html {
     font-weight: normal;
     font-style: normal;
 }
+
 
 @font-face {
     font-family: 'space-mono';
@@ -90,3 +92,37 @@ body, html {
     font-weight: normal;
     font-style: normal;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .ContactImageMobile { /* Replace with the actual class name of your container */
+      width: 100%;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .video-container video {
+      width: 20%;
+      height: 100%; /* Adjust height as needed */
+    }
+}
+/* Desktop styles */
+.image-container {
+    width: 48%; /* Default width for desktop */
+    /* Add other desktop-specific styles here */
+}
+
+@media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
+    .image-container {
+      width: 100%;
+      height: auto; /* Full width on mobile screens */
+      margin-top: 65px;
+    }
+}
+
+/* Desktop Styles */
+.desktop-typewriter-container h1 {
+    /* Desktop-specific styles here */
+    font-size: 2.8vw;
+  }
