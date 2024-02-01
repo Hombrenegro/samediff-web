@@ -116,7 +116,7 @@ body {
 @media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
     .image-container {
       width: 100%;
-      height: auto; /* Full width on mobile screens */
+      height: 60%; /* Full width on mobile screens */
       margin-top: 65px;
     }
 }
