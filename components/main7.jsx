@@ -31,28 +31,30 @@ const Main = () => {
           />
         </motion.div>
 
-        <motion.div
-          className="relative w-full" // Ensure this container is relative for the child absolute elements
+       {/* Modified motion.div with video-container class */}
+       <motion.div
+          className="relative w-full video-container" // Add 'video-container' class here
           initial={{ opacity: 0, y: 3 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} // Keep existing inline styles
         >
           <video
             autoPlay
             loop
             muted
-            style={{ width: '90%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '90%', height: '100%', objectFit: 'cover' }} // Keep existing inline styles
           >
             <source src="images/website_bg_video_crop.mp4" type="video/mp4" />
           </video>
 
           {/* Adjusted for centering within the relative container */}
-          <div className={style.typewriterContainer} style={{ position: 'absolute', bottom: '-45px', width: '100%' }}>
-            <h1 style={{"fontSize": "2.8vw"}} className="font-space-grotesk font-normal text-sd-gray">
-              <Type />
-            </h1>
-          </div>
+      <div className={`${style.typewriterContainer} desktop-typewriter-container sm:flex-col`} style={{ position: 'absolute', bottom: '-45px', width: '100%' }}>
+        <h1 className="font-space-grotesk font-normal text-sd-gray mobile-typewriter-container">
+          <Type />
+        </h1>
+      </div>
+
         </motion.div>
       </div>
 

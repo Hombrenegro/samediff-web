@@ -112,17 +112,21 @@ body {
     width: 48%; /* Default width for desktop */
     /* Add other desktop-specific styles here */
 }
+  
 
-@media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
+  @media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
     .image-container {
       width: 100%;
       height: auto; /* Full width on mobile screens */
       margin-top: 65px;
     }
 }
+  
+
 
 /* Desktop Styles */
 .desktop-typewriter-container h1 {
     /* Desktop-specific styles here */
     font-size: 2.8vw;
   }
+  
