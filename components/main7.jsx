@@ -49,8 +49,8 @@ const Main = () => {
           </video>
 
           {/* Adjusted for centering within the relative container */}
-      <div className={`${style.typewriterContainer} desktop-typewriter-container sm:flex-col`} style={{ position: 'absolute', bottom: '-45px', width: '100%' }}>
-        <h1 className="font-space-grotesk font-normal text-sd-gray mobile-typewriter-container">
+      <div className={`${style.typewriterContainer} typewriter-container `} style={{ position: 'absolute', bottom: '-45px', width: '100%' }}>
+        <h1 className="font-space-grotesk font-normal text-sd-gray">
           <Type />
         </h1>
       </div>
