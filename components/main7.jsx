@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Header from './header';
 import Footer from './footer';
 import Type from './Title';
 import LogoGrayCrop from "/public/sd-gray-crop.png";
 import { motion } from 'framer-motion';
+import LogoGif from "/public/images/SameDiff_Spin_1280x600.gif";
 
 const style = {
   mainComp: `overflow-x-hidden overflow-y-hidden bg-sd-black min-h-screen min-w-screen z-0`,
@@ -14,6 +15,14 @@ const style = {
 };
 
 const Main = () => {
+
+  var w;
+
+  useEffect(() => {
+    // Safe to access window here
+    w = window;
+  }, []);
+
   return (
     <div className={style.mainComp}>
       <Header />
@@ -43,17 +52,19 @@ const Main = () => {
             autoPlay
             loop
             muted
+            className="hidden md:block"
             style={{ width: '90%', height: '100%', objectFit: 'cover' }} // Keep existing inline styles
           >
             <source src="images/website_bg_video_crop.mp4" type="video/mp4" />
           </video>
+          <img className="block md:hidden" src="images/SameDiff_Spin_1280x600.gif"></img>
 
           {/* Adjusted for centering within the relative container */}
-      <div className={`${style.typewriterContainer} typewriter-container `} style={{ position: 'absolute', bottom: '-45px', width: '100%' }}>
-        <h1 className="font-space-grotesk font-normal text-sd-gray">
-          <Type />
-        </h1>
-      </div>
+          <div className={`${style.typewriterContainer} typewriter-container `} style={{ position: 'absolute', bottom: '-45px', width: '100%' }}>
+            <h1 className="font-space-grotesk font-normal text-sd-gray">
+              <Type />
+            </h1>
+          </div>
 
         </motion.div>
       </div>
